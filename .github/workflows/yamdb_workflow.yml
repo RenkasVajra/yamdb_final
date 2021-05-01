@@ -4,7 +4,15 @@ on:
   push:
     branches: [main]
 
+
 jobs:
+  flake8:
+    on: pull_request
+    resolves: run flake8
+
+    uses: tayfun/flake8-your-pr@master
+    secrets: ${{ secrets.GITHUB_TOKEN }}
+
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
@@ -52,5 +60,3 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: ${{ github.workflow }} успешно выполнен!
 
-
-    
