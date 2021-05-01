@@ -8,12 +8,12 @@ on:
 jobs:
   flake8:
     runs-on: ubuntu-latest
-      name: job for flake8
-      steps:
-        - name: Flake8 Annotator
-          # You may pin to the exact commit or the version.
-          # uses: rbialon/flake8-annotations@f8c29dc2e054df26e0171b0005e99454f7db57a0
-          uses: rbialon/flake8-annotations@v1
+    name: job for flake8
+    steps:
+      - name: Flake8 Annotator
+        # You may pin to the exact commit or the version.
+        # uses: rbialon/flake8-annotations@f8c29dc2e054df26e0171b0005e99454f7db57a0
+        uses: rbialon/flake8-annotations@v1
 
   tests:
     runs-on: ubuntu-latest
