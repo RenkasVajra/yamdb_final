@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Flake8 Annotator
         # You may pin to the exact commit or the version.
-        # uses: rbialon/flake8-annotations@f8c29dc2e054df26e0171b0005e99454f7db57a0
+        # uses: rbialon/flake8-annotations@f8c29dc2e054df26e0171b0005e99454f7db57a0 /
         uses: rbialon/flake8-annotations@v1
 
   tests:
