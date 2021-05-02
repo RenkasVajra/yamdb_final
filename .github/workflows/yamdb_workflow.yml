@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     name: job for flake8
     steps:
-      - name: Flake8 Annotator
-        uses: rbialon/flake8-annotations@v1
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -19,6 +17,8 @@ jobs:
           pip install -r requirements.txt
       - name: Lint with flake8
         run: flake8 .
+      - name: Flake8 Annotator
+        uses: rbialon/flake8-annotations@v1
 
   tests:
     runs-on: ubuntu-latest
